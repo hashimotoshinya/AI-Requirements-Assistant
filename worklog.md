@@ -30,5 +30,15 @@
 - Changed files: Laravelスケルトン一式、`compose.yaml`、`docker/php/Dockerfile`、`.dockerignore`、`.env.example`、`README.md`、`docs/decisions/0001-local-development-environment.md`。
 - Tests: Docker Compose起動、MySQL migration、`php artisan test`（2 passed）、`http://127.0.0.1:8000/`（HTTP 200）。
 - Decisions / ADR: [ADR 0001](docs/decisions/0001-local-development-environment.md)
-- Open items / next action: GitHub CLIの認証後にGitHubリポジトリを作成し、初期コミットをpushする。
-- Commit: `82a14da` (`chore: initialize Laravel development environment`)
+- Open items / next action: GitHubリポジトリを作成し、初期コミットをpushする。
+- Commit: `2a14c63` (`chore: initialize Laravel development environment`)
+
+### 2026-08-19 — Phase 0: GitHubリポジトリ連携
+
+- Status: `[x]`
+- Summary: 作成済みGitHubリポジトリを`origin`として登録し、メール保護設定に合わせて未公開コミットのauthor/committerをGitHub noreplyへ更新したうえで`main`をpushした。Git運用方針に合わせ、`develop`ブランチも同じ状態から作成・pushする。
+- Changed files: `tasks.md`、`worklog.md`
+- Tests: `git push -u origin main`成功。`develop` push後に`git ls-remote --heads origin`で確認する。
+- Decisions / ADR: なし
+- Open items / next action: Phase 1（認証）を開始する。
+- Commit: このPhase 0完了記録を次のコミットで保存する。
