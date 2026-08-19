@@ -36,9 +36,9 @@
 ### 2026-08-19 — Phase 0: GitHubリポジトリ連携
 
 - Status: `[x]`
-- Summary: 作成済みGitHubリポジトリを`origin`として登録し、メール保護設定に合わせて未公開コミットのauthor/committerをGitHub noreplyへ更新したうえで`main`をpushした。Git運用方針に合わせ、`develop`ブランチも同じ状態から作成・pushする。
+- Summary: 作成済みGitHubリポジトリを`origin`として登録し、メール保護設定に合わせて未公開コミットのauthor/committerをGitHub noreplyへ更新したうえで`main`をpushした。Git運用方針に合わせ、`develop`ブランチも同じ状態から作成・pushした。
 - Changed files: `tasks.md`、`worklog.md`
-- Tests: `git push -u origin main`成功。`develop` push後に`git ls-remote --heads origin`で確認する。
+- Tests: `git push -u origin main`、`git push -u origin develop`成功。`git ls-remote --heads origin`で`main` / `develop`を確認済み。
 - Decisions / ADR: なし
 - Open items / next action: Phase 1（認証）を開始する。
-- Commit: このPhase 0完了記録を次のコミットで保存する。
+- Commit: `docs: complete phase 0 setup`
