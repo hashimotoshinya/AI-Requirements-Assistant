@@ -31,4 +31,4 @@
 - Tests: Docker Compose起動、MySQL migration、`php artisan test`（2 passed）、`http://127.0.0.1:8000/`（HTTP 200）。
 - Decisions / ADR: [ADR 0001](docs/decisions/0001-local-development-environment.md)
 - Open items / next action: GitHub CLIの認証後にGitHubリポジトリを作成し、初期コミットをpushする。
-- Commit: 初期コミット作成予定
+- Commit: `82a14da` (`chore: initialize Laravel development environment`)
